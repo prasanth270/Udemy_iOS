@@ -10,10 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    /* Picker View UI Element */
+    /* State Picker View - UI Element */
     @IBOutlet weak var statePicker: UIPickerView!
-    /* Button View UI Element */
+    /* Select State Button -  UI Element */
     @IBOutlet weak var statePickerButton: UIButton!
+    /* Buy Now Button - UI Element */
+    @IBOutlet weak var buyNowButton: UIButton!
+    /* Success Image View - UI Element */
+    @IBOutlet weak var successImageView: UIImageView!
     
     /* List of Few States */
     let states = ["California", "Florida", "Nevada", "Washington", "Texas", "North Carolina"]
@@ -50,5 +54,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.isHidden = true
     }
     
+    /* Buy Now Button Action to Hide all Subviews and Show Success Image */
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        for view in self.view.subviews {
+            view.isHidden = true //Hide all Sub Views in UIView
+        }
+        successImageView.isHidden = false
+    }
 }
 
