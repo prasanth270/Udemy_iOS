@@ -8,3 +8,7 @@ Features: Image View's, Button's, Label's, Text Field's, UIPickerView
 
 ## UI ScrollView Example
 Features: UIScroll View, Swipe Gesture Recognizers & Image Views
+
+## Working With Segue's
+
+Features: Segue best Practices. (Project Wrongly Named to StackViews)
