@@ -37,6 +37,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         
         var contentWidth: CGFloat = 0.0
+        /* Scroll View Width - 260*/
         let scrollViewWidth: CGFloat = scrollView.frame.size.width
         
         //scrollView.backgroundColor = UIColor.darkGray
@@ -47,6 +48,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
             var newX: CGFloat = 0.0
             
+            /* Position of the Image View on X Axis */
             newX = scrollViewWidth / 2 + scrollViewWidth * CGFloat(id)
             
             contentWidth += newX
