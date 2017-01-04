@@ -62,14 +62,33 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.size.height) // Set the Content size of Scroll View
     }
     
-    /* Function to Handle Left Swipe and Right Swipe outside ScrollView - Pending */
+    /* Function to Handle Left Swipe and Right Swipe outside ScrollView - Finished */
     func handleSwipes(_ sender: UISwipeGestureRecognizer) {
+        
+        var contentOffset = scrollView.contentOffset
+        
+        let scrollWidth = scrollView.frame.size.width
+        
         if (sender.direction == .right) {
             print("Right")
+            let newX = contentOffset.x - scrollWidth
+            
+            if newX >= 0 {
+                contentOffset.x = newX
+            }
+            
         } else if (sender.direction == .left) {
             print("Left")
+            
+            let newX = contentOffset.x + scrollWidth
+            
+            if newX <= scrollView.contentSize.width {
+                contentOffset.x = newX
+            }
         }
+        
+        scrollView.bounces = true
+        
+        scrollView.setContentOffset(contentOffset, animated: true)
     }
-    
 }
-

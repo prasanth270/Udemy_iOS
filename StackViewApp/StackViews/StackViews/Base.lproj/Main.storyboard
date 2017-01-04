@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsu-R4-rUq">
-                                <rect key="frame" x="131" y="160" width="112" height="30"/>
+                                <rect key="frame" x="131.5" y="160" width="112" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Gs-9N-GKd"/>
                                     <constraint firstAttribute="width" constant="112" id="ft8-xG-wfY"/>
@@ -93,7 +93,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ha-I5-Q8Q">
-                                <rect key="frame" x="145" y="318" width="84" height="30"/>
+                                <rect key="frame" x="145.5" y="318.5" width="84" height="30"/>
                                 <state key="normal" title="Next Screen"/>
                                 <connections>
                                     <action selector="nextScreenBtnPressed:" destination="y9r-8m-RLA" eventType="touchUpInside" id="qeg-Lx-GIe"/>
