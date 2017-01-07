@@ -12,3 +12,6 @@ Features: UIScroll View, Swipe Gesture Recognizers & Image Views
 ## Working With Segue's
 
 Features: Segue best Practices. (Project Wrongly Named to StackViews)
+
+## Calculator App
+
