@@ -9,21 +9,28 @@
 import UIKit
 
 class VideoViewController: UIViewController {
+    
+    /* UI Web View to Show Youtube Video */
+    @IBOutlet weak var webView: UIWebView!
+    
+    /* Object for PartyRockModel class */
+    private var _partyRockModel: PartyRockModel!
+    
+    /* Getter & Setter for _partyRockModel */
+    var partyRockModel: PartyRockModel {
+        get {
+            return _partyRockModel
+        } set {
+            _partyRockModel = newValue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /* Set the Video URL to Webview */
+        webView.loadHTMLString(partyRockModel.videoURL, baseURL: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5189BF6F1E23798300B4D9CD /* PartyRockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BF6E1E23798300B4D9CD /* PartyRockModel.swift */; };
 		51FE6F941E22061A00F38F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE6F931E22061A00F38F69 /* AppDelegate.swift */; };
 		51FE6F961E22061A00F38F69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE6F951E22061A00F38F69 /* MainViewController.swift */; };
 		51FE6F991E22061A00F38F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FE6F971E22061A00F38F69 /* Main.storyboard */; };
@@ -14,9 +15,11 @@
 		51FE6F9E1E22061A00F38F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FE6F9C1E22061A00F38F69 /* LaunchScreen.storyboard */; };
 		51FE6FA91E2208A100F38F69 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51FE6FA81E2208A100F38F69 /* still time.ttf */; };
 		51FE6FAB1E220B0600F38F69 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE6FAA1E220B0600F38F69 /* VideoViewController.swift */; };
+		51FE6FAD1E22ECBE00F38F69 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE6FAC1E22ECBE00F38F69 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5189BF6E1E23798300B4D9CD /* PartyRockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyRockModel.swift; sourceTree = "<group>"; };
 		51FE6F901E22061A00F38F69 /* PartyRockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyRockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FE6F931E22061A00F38F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51FE6F951E22061A00F38F69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		51FE6F9F1E22061A00F38F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FE6FA81E2208A100F38F69 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 		51FE6FAA1E220B0600F38F69 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		51FE6FAC1E22ECBE00F38F69 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 		51FE6F921E22061A00F38F69 /* PartyRockApp */ = {
 			isa = PBXGroup;
 			children = (
-				51FE6FA71E22064200F38F69 /* Controller */,
-				51FE6FA61E22063D00F38F69 /* View */,
 				51FE6FA51E22063700F38F69 /* Model */,
+				51FE6FA61E22063D00F38F69 /* View */,
+				51FE6FA71E22064200F38F69 /* Controller */,
 				51FE6F931E22061A00F38F69 /* AppDelegate.swift */,
 				51FE6FA81E2208A100F38F69 /* still time.ttf */,
 				51FE6F971E22061A00F38F69 /* Main.storyboard */,
@@ -74,6 +78,7 @@
 		51FE6FA51E22063700F38F69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5189BF6E1E23798300B4D9CD /* PartyRockModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 		51FE6FA61E22063D00F38F69 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51FE6FAC1E22ECBE00F38F69 /* MainTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -168,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FE6F961E22061A00F38F69 /* MainViewController.swift in Sources */,
+				5189BF6F1E23798300B4D9CD /* PartyRockModel.swift in Sources */,
 				51FE6F941E22061A00F38F69 /* AppDelegate.swift in Sources */,
+				51FE6FAD1E22ECBE00F38F69 /* MainTableViewCell.swift in Sources */,
 				51FE6FAB1E220B0600F38F69 /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +339,7 @@
 				51FE6FA41E22061A00F38F69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

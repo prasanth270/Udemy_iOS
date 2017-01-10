@@ -42,7 +42,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Videos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-ne-lp4">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="28"/>
                                                 <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="23"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.76105024430000001" green="0.44852475600000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Songs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73g-Q2-F7H" userLabel="Top Songs">
@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="238" width="375" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="chf-gR-Njx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyRockCell" rowHeight="109" id="chf-gR-Njx" customClass="MainTableViewCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="chf-gR-Njx" id="RW4-wd-VvF">
@@ -100,6 +100,10 @@
                                                 <constraint firstItem="2wQ-vC-bW9" firstAttribute="top" secondItem="RW4-wd-VvF" secondAttribute="topMargin" id="rfo-aK-PwD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoImagePreview" destination="2wQ-vC-bW9" id="srZ-di-5Vh"/>
+                                            <outlet property="videoImageTitle" destination="YVo-TH-h0j" id="CF9-TV-dCp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,7 +123,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="b2d-5r-PRB" kind="showDetail" id="QXf-aS-Oky"/>
+                        <outlet property="tableView" destination="j9f-J4-7sg" id="S0M-iL-hJJ"/>
+                        <segue destination="b2d-5r-PRB" kind="showDetail" identifier="VideoVCSegue" id="QXf-aS-Oky"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,6 +158,9 @@
                             <constraint firstItem="9jY-sS-Opm" firstAttribute="top" secondItem="v1e-4L-8AE" secondAttribute="top" id="hf1-9d-hv1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="9jY-sS-Opm" id="mTe-5H-aNx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YI2-U5-tMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
