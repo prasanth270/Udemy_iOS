@@ -25,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //generateData()
         attemptFetch()
-        
+    
     }
     
     /* ---- Default Implementations from TableViewDelegate ---- */
