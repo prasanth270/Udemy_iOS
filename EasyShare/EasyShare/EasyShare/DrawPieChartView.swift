@@ -44,15 +44,31 @@ class DrawPieChartView: UIView {
         
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = mainColor.cgColor
-
-        path.fill()
+        UIColor.blue.setFill()
+        path.stroke()
         
+        let linePath = UIBezierPath()
         
+        linePath.lineWidth = 1.0
+        
+        linePath.move(to: point)
+        linePath.addLine(to: CGPoint(x: frame.width/2 + 100, y: frame.height/2))
+        
+        linePath.move(to: point)
+        linePath.addLine(to: CGPoint(x: frame.width/2, y: frame.height/2 + 100))
+        
+        UIColor.black.setFill()
+        
+        linePath.stroke()
         //layer.addSublayer(shapeLayer)
         
         if isSelected {
             //drawBorder(rect: rect)
         }
+    }
+    
+    func drawQuadCircle(centerPoint: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, lineWidth: CGFloat) {
+        
     }
     
     /* */
@@ -72,11 +88,11 @@ class DrawPieChartView: UIView {
         layer.addSublayer(shapeLayer)
     }
     
-    @IBInspectable var progress : Double =  0.0 {
-        didSet {
-            self.setNeedsDisplay()
-        }
-    }
+//    @IBInspectable var progress : Double =  0.0 {
+//        didSet {
+//            self.setNeedsDisplay()
+//        }
+//    }
     
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
