@@ -38,37 +38,52 @@ class DrawPieChartView: UIView {
      An empty implementation adversely affects performance during animation. */
     override func draw(_ rect: CGRect) {
         //let path = UIBezierPath(ovalIn: rect)
+        let radius: CGFloat = frame.width/2
         let point: CGPoint = CGPoint(x: frame.width/2, y: frame.height/2)
-        let path = UIBezierPath(arcCenter: point, radius: 100, startAngle: 0, endAngle: 3.14/2, clockwise: true)
+        let point1: CGPoint = CGPoint(x: frame.width/2 + radius, y: frame.height/2)
+        let point2: CGPoint = CGPoint(x: frame.width/2, y: frame.height/2 + radius)
+        let point3: CGPoint = CGPoint(x: frame.width/2, y: frame.height/2 - radius)
         let shapeLayer = CAShapeLayer()
         
-        shapeLayer.path = path.cgPath
         shapeLayer.fillColor = mainColor.cgColor
-        UIColor.blue.setFill()
-        path.stroke()
         
-        let linePath = UIBezierPath()
+//        let linePath = UIBezierPath()
+//        linePath.lineWidth = 1.0
+//        linePath.move(to: point)
+//        linePath.addLine(to: CGPoint(x: frame.width/2 + radius, y: frame.height/2))
+//        linePath.addArc(withCenter: point, radius: frame.width/2, startAngle: 0, endAngle: 3.14/2, clockwise: true)
+//        linePath.move(to: point)
+//        linePath.addLine(to: CGPoint(x: frame.width/2, y: frame.height/2 + radius))
+//        
+//        linePath.fill()
         
-        linePath.lineWidth = 1.0
-        
-        linePath.move(to: point)
-        linePath.addLine(to: CGPoint(x: frame.width/2 + 100, y: frame.height/2))
-        
-        linePath.move(to: point)
-        linePath.addLine(to: CGPoint(x: frame.width/2, y: frame.height/2 + 100))
-        
-        UIColor.black.setFill()
-        
-        linePath.stroke()
+        drawArc(centerPoint: point, startPoint: point1, endPoint: point2, radius: radius, startAngle: 0, endAngle: 3.14/2, lineWidth: 1, selectColor: 1)
+        drawArc(centerPoint: point, startPoint: point2, endPoint: point3, radius: radius, startAngle: 3.14/2, endAngle: 3.14, lineWidth: 1, selectColor: 2)
         //layer.addSublayer(shapeLayer)
-        
+ 
         if isSelected {
             //drawBorder(rect: rect)
         }
     }
     
-    func drawQuadCircle(centerPoint: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, lineWidth: CGFloat) {
+    func drawArc(centerPoint: CGPoint, startPoint: CGPoint, endPoint: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, lineWidth: CGFloat, selectColor: Int) {
         
+        let linePath = UIBezierPath()
+        linePath.lineWidth = 1.0
+        linePath.move(to: centerPoint)
+        linePath.addLine(to: startPoint)
+        linePath.addArc(withCenter: centerPoint, radius: frame.width/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        linePath.move(to: centerPoint)
+        linePath.addLine(to: endPoint)
+        
+        if selectColor == 1 {
+            UIColor.blue.setFill()
+        } else if selectColor == 2 {
+            UIColor.orange.setFill()
+        }
+        
+        linePath.fill()
+        linePath.close()
     }
     
     /* */
