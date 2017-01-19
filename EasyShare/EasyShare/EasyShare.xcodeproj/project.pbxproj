@@ -15,6 +15,7 @@
 		51125B891E298DAA00F12D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51125B871E298DAA00F12D43 /* LaunchScreen.storyboard */; };
 		51125B921E2AA09700F12D43 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B911E2AA09700F12D43 /* GraphViewController.swift */; };
 		51125B951E2AA10100F12D43 /* DrawPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B941E2AA10100F12D43 /* DrawPieChartView.swift */; };
+		51175F021E3075BE0022520B /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51175F011E3075BE0022520B /* AddBillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		51125B8A1E298DAA00F12D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51125B911E2AA09700F12D43 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		51125B941E2AA10100F12D43 /* DrawPieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPieChartView.swift; sourceTree = "<group>"; };
+		51175F011E3075BE0022520B /* AddBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				51125B7D1E298DAA00F12D43 /* ViewController.swift */,
 				51125B911E2AA09700F12D43 /* GraphViewController.swift */,
+				51175F011E3075BE0022520B /* AddBillViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				51125B921E2AA09700F12D43 /* GraphViewController.swift in Sources */,
 				51125B841E298DAA00F12D43 /* EasyShare.xcdatamodeld in Sources */,
 				51125B7C1E298DAA00F12D43 /* AppDelegate.swift in Sources */,
+				51175F021E3075BE0022520B /* AddBillViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +331,7 @@
 				51125B8F1E298DAA00F12D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
