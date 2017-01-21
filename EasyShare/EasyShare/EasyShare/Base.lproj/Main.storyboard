@@ -68,7 +68,10 @@
                                                 <rect key="frame" x="0.0" y="88.5" width="237" height="25.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                                <state key="normal" title="My Totals"/>
+                                                <state key="normal" title="My Expenses"/>
+                                                <connections>
+                                                    <segue destination="Vvx-hJ-Vso" kind="presentation" id="Syd-6b-1Su"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -93,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hEO-Sn-UeL" id="9oV-8C-rYU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFc-57-XK0">
@@ -210,6 +213,9 @@
                     <navigationItem key="navigationItem" title="Group Name" id="ewv-ni-x01">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="j4A-WR-TP6">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="tIB-Rg-ZdI" kind="presentation" id="3rC-gd-mIX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -217,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="38" y="841"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Idz-9o-pEs">
             <objects>
-                <viewController id="1Ml-GI-xHn" sceneMemberID="viewController">
+                <viewController id="1Ml-GI-xHn" customClass="LoginViewController" customModule="EasyShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qgY-7m-uUi"/>
                         <viewControllerLayoutGuide type="bottom" id="fuh-5J-26e"/>
@@ -285,15 +291,18 @@
                             <constraint firstItem="r0e-ZK-Gid" firstAttribute="leading" secondItem="Hcg-eE-s1b" secondAttribute="leadingMargin" id="oXE-eC-Fu4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="QnZ-BK-n7o" kind="presentation" id="v6i-WH-1SH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnN-Tg-0a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1527" y="123"/>
+            <point key="canvasLocation" x="-1642" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--User Groups View Controller-->
         <scene sceneID="RUq-5B-GPB">
             <objects>
-                <viewController id="QnZ-BK-n7o" sceneMemberID="viewController">
+                <viewController id="QnZ-BK-n7o" customClass="UserGroupsViewController" customModule="EasyShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3d7-6P-6Ol"/>
                         <viewControllerLayoutGuide type="bottom" id="o1Z-l8-Nq3"/>
@@ -372,10 +381,31 @@
                             <constraint firstItem="d67-wd-Veu" firstAttribute="leading" secondItem="XUo-bL-VLs" secondAttribute="leadingMargin" id="xkd-p6-mfF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="4yy-C0-Mj9" kind="presentation" id="ykV-Qn-7c6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlZ-40-oUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-815" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JsK-SW-BdF">
+            <objects>
+                <viewController id="KQR-dE-y40" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6tc-Ju-EO3"/>
+                        <viewControllerLayoutGuide type="bottom" id="AQk-Oa-DhA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zqx-6u-lHB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpi-oe-FXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815" y="841"/>
         </scene>
         <!--Add Bill View Controller-->
         <scene sceneID="aEH-tv-rUY">
