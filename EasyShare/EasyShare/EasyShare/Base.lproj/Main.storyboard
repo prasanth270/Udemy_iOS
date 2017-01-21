@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4yy-C0-Mj9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Ml-GI-xHn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Group Name-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EasyShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShowGroupViewController" customModule="EasyShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -269,6 +269,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginButtonAction:" destination="1Ml-GI-xHn" eventType="touchUpInside" id="80m-cB-flk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -292,12 +295,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="QnZ-BK-n7o" kind="presentation" id="v6i-WH-1SH"/>
+                        <outlet property="emailAddressTxtBox" destination="cAP-VC-u4W" id="oi9-Mv-dTR"/>
+                        <outlet property="loginButton" destination="t1h-Xv-BIu" id="ZFT-fd-uHH"/>
+                        <outlet property="passwordTxtBox" destination="c0L-5H-KIF" id="v8F-cy-rpo"/>
+                        <segue destination="QnZ-BK-n7o" kind="presentation" identifier="userGroupsSegue" id="v6i-WH-1SH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnN-Tg-0a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1642" y="123"/>
+            <point key="canvasLocation" x="-1703" y="123"/>
         </scene>
         <!--User Groups View Controller-->
         <scene sceneID="RUq-5B-GPB">
@@ -327,8 +333,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Create Group"/>
+                                <connections>
+                                    <action selector="createGroupBtnAction:" destination="QnZ-BK-n7o" eventType="touchUpInside" id="BUj-Ne-QfP"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d67-wd-Veu">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d67-wd-Veu">
                                 <rect key="frame" x="16" y="239" width="343" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Wq7-09-gof">
@@ -340,7 +349,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-zz-En4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-zz-En4" userLabel="Group Name Text Box">
                                                 <rect key="frame" x="106.5" y="0.0" width="236.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -357,7 +366,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Image" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-Nf-JhC">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Image" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-Nf-JhC" userLabel="Group Image Text Box">
                                                 <rect key="frame" x="108" y="0.0" width="235" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -382,7 +391,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="4yy-C0-Mj9" kind="presentation" id="ykV-Qn-7c6"/>
+                        <outlet property="createGroupBtn" destination="yDK-iO-yr3" id="r6d-k1-0eY"/>
+                        <outlet property="createGroupStackView" destination="d67-wd-Veu" id="TUw-1O-3f2"/>
+                        <outlet property="groupNameTxtBox" destination="B7P-zz-En4" id="ISm-mD-DUg"/>
+                        <segue destination="4yy-C0-Mj9" kind="presentation" identifier="ShowGroupSegue" id="ykV-Qn-7c6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlZ-40-oUd" userLabel="First Responder" sceneMemberID="firstResponder"/>

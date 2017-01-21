@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51125B7C1E298DAA00F12D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B7B1E298DAA00F12D43 /* AppDelegate.swift */; };
-		51125B7E1E298DAA00F12D43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B7D1E298DAA00F12D43 /* ViewController.swift */; };
+		51125B7E1E298DAA00F12D43 /* ShowGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B7D1E298DAA00F12D43 /* ShowGroupViewController.swift */; };
 		51125B811E298DAA00F12D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51125B7F1E298DAA00F12D43 /* Main.storyboard */; };
 		51125B841E298DAA00F12D43 /* EasyShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51125B821E298DAA00F12D43 /* EasyShare.xcdatamodeld */; };
 		51125B861E298DAA00F12D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51125B851E298DAA00F12D43 /* Assets.xcassets */; };
@@ -17,13 +17,13 @@
 		51125B951E2AA10100F12D43 /* DrawPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125B941E2AA10100F12D43 /* DrawPieChartView.swift */; };
 		51175F021E3075BE0022520B /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51175F011E3075BE0022520B /* AddBillViewController.swift */; };
 		511D3ADD1E330EE700EB07CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D3ADC1E330EE700EB07CA /* LoginViewController.swift */; };
-		511D3ADF1E330F1E00EB07CA /* UserGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D3ADE1E330F1E00EB07CA /* UserGroupsViewController.swift */; };
+		51CC7D711E331EBE00E252E8 /* UserGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC7D701E331EBE00E252E8 /* UserGroupsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51125B781E298DAA00F12D43 /* EasyShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51125B7B1E298DAA00F12D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51125B7D1E298DAA00F12D43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51125B7D1E298DAA00F12D43 /* ShowGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGroupViewController.swift; sourceTree = "<group>"; };
 		51125B801E298DAA00F12D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51125B831E298DAA00F12D43 /* EasyShare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyShare.xcdatamodel; sourceTree = "<group>"; };
 		51125B851E298DAA00F12D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 		51125B941E2AA10100F12D43 /* DrawPieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPieChartView.swift; sourceTree = "<group>"; };
 		51175F011E3075BE0022520B /* AddBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 		511D3ADC1E330EE700EB07CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		511D3ADE1E330F1E00EB07CA /* UserGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupsViewController.swift; sourceTree = "<group>"; };
+		51CC7D701E331EBE00E252E8 /* UserGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +89,11 @@
 		51125B931E2AA0A100F12D43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				51125B7D1E298DAA00F12D43 /* ViewController.swift */,
+				51CC7D701E331EBE00E252E8 /* UserGroupsViewController.swift */,
+				51125B7D1E298DAA00F12D43 /* ShowGroupViewController.swift */,
 				51125B911E2AA09700F12D43 /* GraphViewController.swift */,
 				51175F011E3075BE0022520B /* AddBillViewController.swift */,
 				511D3ADC1E330EE700EB07CA /* LoginViewController.swift */,
-				511D3ADE1E330F1E00EB07CA /* UserGroupsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -171,13 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				511D3ADD1E330EE700EB07CA /* LoginViewController.swift in Sources */,
-				51125B7E1E298DAA00F12D43 /* ViewController.swift in Sources */,
+				51125B7E1E298DAA00F12D43 /* ShowGroupViewController.swift in Sources */,
 				51125B951E2AA10100F12D43 /* DrawPieChartView.swift in Sources */,
 				51125B921E2AA09700F12D43 /* GraphViewController.swift in Sources */,
 				51125B841E298DAA00F12D43 /* EasyShare.xcdatamodeld in Sources */,
 				51125B7C1E298DAA00F12D43 /* AppDelegate.swift in Sources */,
 				51175F021E3075BE0022520B /* AddBillViewController.swift in Sources */,
-				511D3ADF1E330F1E00EB07CA /* UserGroupsViewController.swift in Sources */,
+				51CC7D711E331EBE00E252E8 /* UserGroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

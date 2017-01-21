@@ -9,7 +9,13 @@
 import UIKit
 
 class UserGroupsViewController: UIViewController {
-
+    
+    @IBOutlet weak var createGroupStackView: UIStackView!
+    
+    @IBOutlet weak var groupNameTxtBox: UITextField!
+    
+    @IBOutlet weak var createGroupBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +26,18 @@ class UserGroupsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func createGroupBtnAction(_ sender: Any) {
+        
+        createGroupStackView.isHidden = false
+        createGroupBtn.setTitle("Save Group", for: .normal)
+        
+        //createGroupBtn.isEnabled = false
+        
+        performSegue(withIdentifier: "ShowGroupSegue", sender: nil)
+        
+    }
+    
     
 
     /*
