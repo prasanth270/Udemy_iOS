@@ -440,18 +440,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-dB-SuC">
-                                <rect key="frame" x="169" y="315" width="36" height="36"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Save"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZlH-ac-xrG">
+                                <rect key="frame" x="16" y="195" width="113" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbe-0x-mkQ">
+                                <rect key="frame" x="163" y="195" width="196" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="de7-dN-cjg">
+                                <rect key="frame" x="163" y="244" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1r-1V-TWF">
+                                <rect key="frame" x="297" y="278" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GNb-dB-SuC" firstAttribute="centerY" secondItem="vse-mY-1H1" secondAttribute="centerY" id="7lU-ug-8KH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ujQ-Ou-LG7" secondAttribute="trailing" id="IW5-4f-Zvx"/>
                             <constraint firstItem="ujQ-Ou-LG7" firstAttribute="top" secondItem="BRO-n7-IFC" secondAttribute="bottom" id="KAF-q6-XYj"/>
-                            <constraint firstItem="GNb-dB-SuC" firstAttribute="centerX" secondItem="vse-mY-1H1" secondAttribute="centerX" id="ZwQ-Mf-3fX"/>
                             <constraint firstItem="ujQ-Ou-LG7" firstAttribute="leading" secondItem="vse-mY-1H1" secondAttribute="leadingMargin" id="y2M-12-ubV"/>
                         </constraints>
                     </view>
@@ -473,7 +489,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-FY-OFW" customClass="DrawPieChartView" customModule="EasyShare" customModuleProvider="target">
-                                <rect key="frame" x="79" y="225.5" width="216" height="216"/>
+                                <rect key="frame" x="79" y="226" width="216" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="DKo-rB-wKU"/>
