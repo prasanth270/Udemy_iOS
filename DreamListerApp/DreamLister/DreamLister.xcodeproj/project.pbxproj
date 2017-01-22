@@ -80,8 +80,8 @@
 		51481CBA1E288F8A00289800 /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
-				51AB54981E346F58008FEBF7 /* Controller */,
 				51481CF61E289DCC00289800 /* View */,
+				51AB54981E346F58008FEBF7 /* Controller */,
 				51481CF21E2897C200289800 /* Model */,
 				51481CBB1E288F8A00289800 /* AppDelegate.swift */,
 				51481CBF1E288F8A00289800 /* Main.storyboard */,

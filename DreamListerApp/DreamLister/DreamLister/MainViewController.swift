@@ -25,6 +25,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //generateData()
         attemptFetch()
+        
+        tableView.reloadData()
     
     }
     
@@ -87,12 +89,35 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         /* Context is the NSManagedContext set in AppDelegate as context = AppDelegate.persistentContainer.viewContext*/
         controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self
+        
         do {
             try self.controller.performFetch() /* Perform Fetch From Database and set Data to FRC */
         } catch {
             let err = error as NSError
             print(err)
         }
+    }
+    
+    /* When a row is selected */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let objects = controller.fetchedObjects, objects.count > 0 {
+            
+            let item = objects[indexPath.row]
+            performSegue(withIdentifier: "itemDetailsVCSegeue", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemDetailsVCSegeue" {
+            if let destination = segue.destination as? ItemDetailsViewController {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+        
     }
     
     /* When Data In controller is Changed, Begin to Update the table View */

@@ -38,7 +38,7 @@
                                 <rect key="frame" x="16" y="112" width="343" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="lcC-lh-O6i" customClass="ItemTableViewCell" customModule="DreamLister" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="lcC-lh-O6i" customClass="ItemTableViewCell" customModule="DreamLister" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lcC-lh-O6i" id="8Fe-Zd-6gQ">
@@ -218,6 +218,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="1Gk-h3-B06" eventType="touchUpInside" id="bI3-iJ-iEA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,6 +252,12 @@
                             <color key="tintColor" red="1" green="0.24124742544061306" blue="0.21501414459395174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="bJo-FR-gQ6" id="d1U-SN-rT7"/>
+                        <outlet property="priceField" destination="ay5-k2-bCf" id="TpQ-p0-xS9"/>
+                        <outlet property="storePicker" destination="age-Tm-mVU" id="lHr-UZ-e2j"/>
+                        <outlet property="titleField" destination="n7j-KQ-e60" id="z0v-V0-yib"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40F-8n-WuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
