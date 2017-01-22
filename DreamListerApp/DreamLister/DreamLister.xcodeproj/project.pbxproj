@@ -23,6 +23,8 @@
 		51481CF11E2897BB00289800 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51481CE91E2897BB00289800 /* Image+CoreDataProperties.swift */; };
 		51481CF81E289DEC00289800 /* MaterialDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51481CF71E289DEC00289800 /* MaterialDesignView.swift */; };
 		51481CFA1E289FFA00289800 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51481CF91E289FFA00289800 /* ItemTableViewCell.swift */; };
+		51AB549A1E346F76008FEBF7 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB54991E346F76008FEBF7 /* ItemDetailsViewController.swift */; };
+		51AB549C1E347367008FEBF7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB549B1E347367008FEBF7 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		51481CE91E2897BB00289800 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		51481CF71E289DEC00289800 /* MaterialDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialDesignView.swift; sourceTree = "<group>"; };
 		51481CF91E289FFA00289800 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		51AB54991E346F76008FEBF7 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		51AB549B1E347367008FEBF7 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +80,10 @@
 		51481CBA1E288F8A00289800 /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				51AB54981E346F58008FEBF7 /* Controller */,
 				51481CF61E289DCC00289800 /* View */,
 				51481CF21E2897C200289800 /* Model */,
 				51481CBB1E288F8A00289800 /* AppDelegate.swift */,
-				51481CBD1E288F8A00289800 /* MainViewController.swift */,
 				51481CBF1E288F8A00289800 /* Main.storyboard */,
 				51481CC51E288F8A00289800 /* Assets.xcassets */,
 				51481CC71E288F8A00289800 /* LaunchScreen.storyboard */,
@@ -115,10 +119,20 @@
 		51481CF61E289DCC00289800 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51AB549B1E347367008FEBF7 /* CustomTextField.swift */,
 				51481CF71E289DEC00289800 /* MaterialDesignView.swift */,
 				51481CF91E289FFA00289800 /* ItemTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		51AB54981E346F58008FEBF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51481CBD1E288F8A00289800 /* MainViewController.swift */,
+				51AB54991E346F76008FEBF7 /* ItemDetailsViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +219,9 @@
 				51481CBC1E288F8A00289800 /* AppDelegate.swift in Sources */,
 				51481CC41E288F8A00289800 /* DreamLister.xcdatamodeld in Sources */,
 				51481CF01E2897BB00289800 /* Image+CoreDataClass.swift in Sources */,
+				51AB549A1E346F76008FEBF7 /* ItemDetailsViewController.swift in Sources */,
 				51481CF11E2897BB00289800 /* Image+CoreDataProperties.swift in Sources */,
+				51AB549C1E347367008FEBF7 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +383,7 @@
 				51481CCF1E288F8A00289800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
