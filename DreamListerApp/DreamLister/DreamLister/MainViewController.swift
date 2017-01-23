@@ -23,6 +23,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        //controller = NSFetchedResultsController()
+        //controller.delegate = self
+        
         //generateData()
         attemptFetch()
         
@@ -33,7 +36,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     /* ---- Default Implementations from TableViewDelegate ---- */
     /* Number of Section in Table View */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if let sections = controller.sections {
          
             let sectionInfo = sections[section]

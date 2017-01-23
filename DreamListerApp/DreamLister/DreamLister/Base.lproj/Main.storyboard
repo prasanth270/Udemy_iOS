@@ -159,6 +159,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNZ-zs-5cq">
+                                <rect key="frame" x="16" y="72" width="111" height="109"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="1Gk-h3-B06" eventType="touchUpInside" id="HaD-Hc-JZh"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-1D-k9V">
                                 <rect key="frame" x="16" y="72" width="111" height="109"/>
                                 <constraints>
@@ -229,6 +235,7 @@
                             <constraint firstItem="R64-mx-vBB" firstAttribute="leading" secondItem="Q6b-r0-8hf" secondAttribute="leadingMargin" id="30d-1j-jxV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="age-Tm-mVU" secondAttribute="trailing" id="5vS-kY-M58"/>
                             <constraint firstItem="n7j-KQ-e60" firstAttribute="trailing" secondItem="Q6b-r0-8hf" secondAttribute="trailingMargin" id="Bsl-GG-C6E"/>
+                            <constraint firstItem="QNZ-zs-5cq" firstAttribute="leading" secondItem="ycg-1D-k9V" secondAttribute="leading" id="Cuh-79-lBQ"/>
                             <constraint firstItem="ycg-1D-k9V" firstAttribute="leading" secondItem="Q6b-r0-8hf" secondAttribute="leadingMargin" id="Emb-nA-N1d"/>
                             <constraint firstItem="bJo-FR-gQ6" firstAttribute="leading" secondItem="Q6b-r0-8hf" secondAttribute="leadingMargin" id="Ggn-QK-jIU"/>
                             <constraint firstItem="age-Tm-mVU" firstAttribute="centerX" secondItem="Q6b-r0-8hf" secondAttribute="centerX" id="HhK-hq-7x2"/>
@@ -243,19 +250,26 @@
                             <constraint firstAttribute="trailingMargin" secondItem="R64-mx-vBB" secondAttribute="trailing" id="cqR-4O-zSy"/>
                             <constraint firstItem="ay5-k2-bCf" firstAttribute="leading" secondItem="ycg-1D-k9V" secondAttribute="trailing" constant="8" id="jYi-3q-SBn"/>
                             <constraint firstItem="bJo-FR-gQ6" firstAttribute="trailing" secondItem="Q6b-r0-8hf" secondAttribute="trailingMargin" id="nDQ-HS-e7H"/>
+                            <constraint firstItem="QNZ-zs-5cq" firstAttribute="bottom" secondItem="ycg-1D-k9V" secondAttribute="bottom" id="o6f-mj-2w3"/>
+                            <constraint firstItem="QNZ-zs-5cq" firstAttribute="top" secondItem="ycg-1D-k9V" secondAttribute="top" id="ooZ-Ut-U9v"/>
                             <constraint firstItem="bJo-FR-gQ6" firstAttribute="top" secondItem="ycg-1D-k9V" secondAttribute="bottom" id="sww-J4-XcD"/>
+                            <constraint firstItem="QNZ-zs-5cq" firstAttribute="trailing" secondItem="ycg-1D-k9V" secondAttribute="trailing" id="tsr-J7-nvk"/>
                             <constraint firstItem="Ix3-Cb-7Ho" firstAttribute="centerX" secondItem="Q6b-r0-8hf" secondAttribute="centerX" id="v4Y-mS-r2g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit" id="H4c-tW-Wr8">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="fAw-3C-tqj">
                             <color key="tintColor" red="1" green="0.24124742544061306" blue="0.21501414459395174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="1Gk-h3-B06" id="gIZ-gk-oLx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="bJo-FR-gQ6" id="d1U-SN-rT7"/>
                         <outlet property="priceField" destination="ay5-k2-bCf" id="TpQ-p0-xS9"/>
                         <outlet property="storePicker" destination="age-Tm-mVU" id="lHr-UZ-e2j"/>
+                        <outlet property="thumbImage" destination="ycg-1D-k9V" id="RP1-aW-USK"/>
                         <outlet property="titleField" destination="n7j-KQ-e60" id="z0v-V0-yib"/>
                     </connections>
                 </viewController>
@@ -268,7 +282,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s3m-Jf-Cgy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tAj-QQ-aln">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tAj-QQ-aln">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
