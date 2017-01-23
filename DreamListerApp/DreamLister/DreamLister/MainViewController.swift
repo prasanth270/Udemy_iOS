@@ -86,7 +86,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         /* Sort Using 'create_date' column */
         let dateSort = NSSortDescriptor(key: "create_date", ascending: false)
         /* Set Sort Descriptors.  Can be Multiple Sort Descriptors */
-        fetchRequest.sortDescriptors = [dateSort]
+        
+        
+        let priceSort = NSSortDescriptor(key: "item_price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "item_title", ascending: true)
+        
+        if segmentControl.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [dateSort]
+        } else if segmentControl.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [priceSort]
+        } else if segmentControl.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [titleSort]
+        }
         
         /* Context is the NSManagedContext set in AppDelegate as context = AppDelegate.persistentContainer.viewContext*/
         controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -100,6 +111,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             print(err)
         }
     }
+    
+    /* Action for Segment change */
+    @IBAction func segmentChange(_ sender: UISegmentedControl) {
+        attemptFetch()
+        
+        tableView.reloadData()
+    }
+    
     
     /* When a row is selected */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
