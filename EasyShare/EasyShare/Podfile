@@ -7,5 +7,7 @@ target 'EasyShare' do
 
   # Pods for EasyShare
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

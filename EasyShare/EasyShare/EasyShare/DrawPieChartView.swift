@@ -17,6 +17,7 @@ class DrawPieChartView: UIView {
         }
     }
     
+    
     @IBInspectable var ringColor: UIColor = UIColor.orange {
         didSet {
             print("Ring Color is Set Here")
@@ -43,12 +44,12 @@ class DrawPieChartView: UIView {
         let point1: CGPoint = CGPoint(x: frame.width/2 + radius, y: frame.height/2)
         let point2: CGPoint = CGPoint(x: frame.width/2, y: frame.height/2 + radius)
         let point3: CGPoint = CGPoint(x: frame.width/2, y: frame.height/2 - radius)
-        let shapeLayer = CAShapeLayer()
+        //let shapeLayer = CAShapeLayer()
         
-        shapeLayer.fillColor = mainColor.cgColor
+        //shapeLayer.fillColor = mainColor.cgColor
         
-        drawArc(centerPoint: point, startPoint: point1, endPoint: point2, radius: radius, startAngle: 0, endAngle: 3.14/2, lineWidth: 1, selectColor: 1)
-        drawArc(centerPoint: point, startPoint: point2, endPoint: point3, radius: radius, startAngle: 3.14/2, endAngle: 3.14, lineWidth: 1, selectColor: 2)
+        drawArc(origin: point, startPoint: point1, endPoint: point2, radius: radius, startAngle: 0, endAngle: 3.14/2, selectColor: 1)
+        drawArc(origin: point, startPoint: point2, endPoint: point3, radius: radius, startAngle: 3.14/2, endAngle: 3.14, selectColor: 2)
         //layer.addSublayer(shapeLayer)
  
         if isSelected {
@@ -56,14 +57,15 @@ class DrawPieChartView: UIView {
         }
     }
     
-    func drawArc(centerPoint: CGPoint, startPoint: CGPoint, endPoint: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, lineWidth: CGFloat, selectColor: Int) {
+    /* Function to Draw different and fill different areas of a Pie Chart */
+    func drawArc(origin: CGPoint, startPoint: CGPoint, endPoint: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, selectColor: Int) {
         
         let linePath = UIBezierPath()
         linePath.lineWidth = 1.0
-        linePath.move(to: centerPoint)
+        linePath.move(to: origin)
         linePath.addLine(to: startPoint)
-        linePath.addArc(withCenter: centerPoint, radius: frame.width/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-        linePath.move(to: centerPoint)
+        linePath.addArc(withCenter: origin, radius: frame.width/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        linePath.move(to: origin)
         linePath.addLine(to: endPoint)
         
         if selectColor == 1 {

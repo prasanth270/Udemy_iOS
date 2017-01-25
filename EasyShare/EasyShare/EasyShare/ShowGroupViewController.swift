@@ -12,14 +12,17 @@ class ShowGroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        if let topItem = self.navigationController?.navigationBar.topItem {
+//            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+//            //topItem.leftBarButtonItem = topItem.backBarButtonItem
+//        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
+        
+        dismiss(animated: true, completion: nil)
     }
-
+    
     
 
 }

@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class UserGroupsViewController: UIViewController {
     
-    @IBOutlet weak var createGroupStackView: UIStackView!
-    
-    @IBOutlet weak var groupNameTxtBox: UITextField!
-    
     @IBOutlet weak var createGroupBtn: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +28,23 @@ class UserGroupsViewController: UIViewController {
     
     @IBAction func createGroupBtnAction(_ sender: Any) {
         
-        createGroupStackView.isHidden = false
-        createGroupBtn.setTitle("Save Group", for: .normal)
-        
         //createGroupBtn.isEnabled = false
         
         performSegue(withIdentifier: "ShowGroupSegue", sender: nil)
         
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signOutUserAction(_ sender: UIBarButtonItem) {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let error as NSError {
+            print("Sign Out Error: \(error)")
+        }
+        
+        //_ = navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
     }
-    */
 
 }
