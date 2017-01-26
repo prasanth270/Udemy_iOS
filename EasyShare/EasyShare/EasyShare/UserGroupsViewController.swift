@@ -13,22 +13,12 @@ class UserGroupsViewController: UIViewController {
     
     @IBOutlet weak var createGroupBtn: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     @IBAction func createGroupBtnAction(_ sender: Any) {
-        
-        //createGroupBtn.isEnabled = false
         
         performSegue(withIdentifier: "ShowGroupSegue", sender: nil)
         
@@ -41,8 +31,6 @@ class UserGroupsViewController: UIViewController {
         } catch let error as NSError {
             print("Sign Out Error: \(error)")
         }
-        
-        //_ = navigationController?.popViewController(animated: true)
         
         dismiss(animated: true, completion: nil)
     }
