@@ -13,6 +13,7 @@ let LATITUDE = "lat="
 let LONGITUDE = "&lon="
 let APP_ID = "&appid="
 
+typealias DownloadComplete = () -> ()
 
 let OPEN_WEATHER_API_KEY = "43821c9ecbe93c05498e00bde8def470"
 

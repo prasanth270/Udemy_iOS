@@ -14,7 +14,6 @@ class CurrentWeather {
     var _date: String!
     var _weatherType: String!
     var _currentTemp: Double!
-    var _highTemp: Double!
     
     var cityName: String {
         if _cityName == nil {
@@ -52,5 +51,40 @@ class CurrentWeather {
         return _currentTemp
     }
     
-    
+    func downloadWeatherData(completed: @escaping (Bool) -> ()) {
+        let currentWeatherUrl = URL(string: WEATHER_URL)!
+        
+        
+        Alamofire.request(currentWeatherUrl).responseJSON { response in
+            let result = response.result
+            
+            if let dataDictionary = result.value as? Dictionary<String, AnyObject> {
+                
+                /* Get City Name from Result */
+                if let name = dataDictionary["name"] as? String {
+                    self._cityName = name.capitalized
+                    print(self._cityName)
+                }
+                
+                /* Get Weather Type from Array of Dictionaries */
+                if let weather = dataDictionary["weather"] as? [Dictionary<String, AnyObject>] {
+                    if let main = weather[0]["main"] as? String {
+                        self._weatherType = main.capitalized
+                        print(self._weatherType)
+                    }
+                }
+                
+                if let main = dataDictionary["main"] as? Dictionary<String, AnyObject> {
+                    if let temperatureInKelvin = main["temp"] as? Double {
+                        
+                        let tempInFarenheight = (temperatureInKelvin * (9/5) - 459.67)
+                        
+                        self._currentTemp = Double(round(10 * tempInFarenheight/10))
+                        print(self.currentTemp)
+                    }
+                }
+            }
+            completed(true)
+        }
+    }
 }

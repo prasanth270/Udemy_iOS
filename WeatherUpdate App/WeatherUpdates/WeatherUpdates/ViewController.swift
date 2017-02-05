@@ -17,11 +17,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var currentWeatherConditionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-
+    var currentWeather: CurrentWeather!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        currentWeather = CurrentWeather()
+        currentWeather.downloadWeatherData { success in
+            if success {
+                print("Hello")
+                self.updateUI()
+            } else {
+                print("Data Load Failed")
+            }
+            
+        }
     }
     
     /* Number of Sections in Table View*/
@@ -41,7 +53,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    
+    func updateUI() {
+        dateLabel.text = currentWeather.date
+        currentTempLabel.text = "\(currentWeather.currentTemp)"
+        currentWeatherConditionLabel.text = currentWeather.weatherType
+        locationLabel.text = currentWeather._cityName
+        
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+    }
 
 }
 
