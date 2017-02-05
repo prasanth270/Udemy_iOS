@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="300" width="375" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="70" id="URd-e4-ZO5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="70" id="URd-e4-ZO5" customClass="WeatherCell" customModule="WeatherUpdates" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="URd-e4-ZO5" id="32r-Oq-1AD">
@@ -147,6 +147,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="RGt-kq-5vR" id="o7c-GG-Uqa"/>
+                                            <outlet property="highTemp" destination="FbC-Rg-i38" id="8pz-ZG-VZM"/>
+                                            <outlet property="lowTemp" destination="wDV-1k-9P2" id="gLH-0a-Nph"/>
+                                            <outlet property="weatherImage" destination="HGZ-Py-qZ7" id="HVu-ma-Xbd"/>
+                                            <outlet property="weatherType" destination="Lee-b8-a79" id="uld-3T-YFD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
