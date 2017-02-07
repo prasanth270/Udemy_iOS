@@ -1,17 +1,13 @@
-# Getting Started With iOS 10 & Swift 3
+This Repository Contains Working Samples of Swift 3 and XCode 8 iOS 10 Apps.
 
-Working with Single View Application
+All the Projects listed below are 'Single View Applications' which will vary from UILabelView to CoreData making use of external libraries and frameworks like 'Alamofire', 'Firebase', 'CocoaPods' & etc.
 
-## Miracle Pills
+List of Projects:
 
-Features: Image View's, Button's, Label's, Text Field's, UIPickerView
-
-## UI ScrollView Example
-Features: UIScroll View, Swipe Gesture Recognizers & Image Views
-
-## Working With Segue's
-
-Features: Segue best Practices. (Project Wrongly Named to StackViews)
-
-## Calculator App
-
+1. Miracle Pills - UIImageView, UIPickerView, UIButton, UILabelView, UItextField
+2. Calculator - AVfoundation (AVAudioPlayer), UIStackView, UIImageView, UIButton 
+3. DreamLister - CoreData, UITableView, UISegmentedControl, Segue, NSFetchedResultsController, CustomTextField (IBDesignable & IBInspectable), UIImageView, 
+4. WeatherUpdate - Cocoapods, AlamoFire, JSON Response Parsing, UITableView, CLLocationManager, CLLocation, Completion Handlers
+5. Party Rock - UITableView, UIWebView, Segue
+6. PokeDex - UICollectionView, Cocoapods, AlamoFire, JSON Response Parsers, CSV File Parsers, Completion handlers, AVAudioPlayer, UISearchBar, 
+7. Easy Share - Cutom View Class - PieChart using UIBeizerView, UIStackView, Firebase Database, Firebase Auth, Firebase Google SignIn, CoreData, UIImageView, UITableView, UISegmentedControl
