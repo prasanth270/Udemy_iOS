@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import PokeDex
+//@testable import PokeDex
 
 class PokeDexTests: XCTestCase {
     
